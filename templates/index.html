@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMatch - Movie Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}"/>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🎬 CineMatch</h1>
+            <p>Discover movies that match your taste</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    placeholder="Search for a movie..." 
+                    id="searchInput"
+                >
+                <button onclick="searchMovies()">Search</button>
+            </div>
+        </div>
+
+        <div class="results-container">
+            <div class="results-grid" id="resultsGrid">
+                <div class="empty-state">
+                    <div class="empty-state-icon">🍿</div>
+                    <p>Search for a movie to get started</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
